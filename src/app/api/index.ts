@@ -34,7 +34,7 @@ export async function POST(req: Request) {
 
   // 🏆 4. (Optional) Sort by fit_score and return top 10
   const topCandidates = enrichedCandidates
-    .sort((a, b) => b.fit_score - a.fit_score)
+    .sort((a, b) => (b.fit_score ?? 0) - (a.fit_score ?? 0))
     .slice(0, 10);
 
   return new Response(

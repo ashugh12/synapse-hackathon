@@ -7,7 +7,6 @@ interface Candidate {
   name: string;
   headline: string;
   linkedin_url: string;
-  github_url: string;
   fit_score: number;
   score_breakdown: {
     education: number;
@@ -193,15 +192,6 @@ export default function Home() {
                         >
                           <ExternalLink size={16} />
                           LinkedIn Profile
-                        </a>
-                        <a
-                          href={candidate.github_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-800 text-sm"
-                        >
-                          <ExternalLink size={16} />
-                          GitHub Profile
                         </a>
                       </div>
                     </div>
